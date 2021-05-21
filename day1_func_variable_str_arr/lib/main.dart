@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
-
-String s1 = 'How are you ? \n';
-String s2 = 'I\'m fine';
-var s3 = '$s1 - $s2';
-int x = 10;
-List<int> numbers = [1, 4, 6, 2, 3, 9 ,11];
-List<String> stringNumbers = numbers.map((number){
-  return 'value = $number';
-}).toList();
-void main() {
+import 'calculation.dart';
+import 'car.dart';
+void main()  {
   //classical may of iterating
   // for (int i = 0; i < numbers.length; i++){
   //   print(numbers[i]);
@@ -17,12 +10,19 @@ void main() {
   //   print(number);
   // });
   stringNumbers.forEach((str) {print(str);});
-
+  //How to init an object ?
+  var myCar = Car(name: 'Lmao bủh bủh', yearOfProduction: 2002);
+  myCar.handleEvent = (){
+    print("Handle in main");
+  };
+  myCar.doSomething();
+  myCar.sayHello(personName: 'Hoang');
   runApp(Center(
       child: Text(
-        '$stringNumbers',
+        myCar.toString(),
         style: TextStyle(fontSize: 20),
         textDirection: TextDirection.ltr,
       )) // left-to-right
   );
 }
+
