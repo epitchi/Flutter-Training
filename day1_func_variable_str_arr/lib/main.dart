@@ -40,6 +40,26 @@ void main()  {
   //How to get a list of names ? use "map"
   List<String> names = cars.map((car) => car.name).toList();
   names.forEach((name) {print('name: ${name}');});
+  // Now we try with final and const(constant)
+  // const int x = 10; // const and final are the same if value type is primitive(int, float, double, string...)
+  // but i can add some more items a "final" list.
+  // In "const" list, you cannot do that!
+  final List<int> someNumbers = [1, 2, 3, 5];
+  // someNumbers.add(7);
+  someNumbers[1] = 99; // you can update item's value in a list(final)
+  // now reference to a const list
+  List<int> someNumbers2 = someNumbers;
+  someNumbers2.add(123);
+  //In a const, i cant add some items to someNumber2 becuz its clone from const
+  //In a final, you can reference someNumbers2 to another array after reference to a "final"
+  //You can define an object without creating a class => Map type
+  Map<String, dynamic> personA = Map();
+  personA['name'] = 'Hoang';
+  personA['age'] = 18;
+  Map<double, double> point = Map();
+  point[2.0] = 3.2; // x = 2.0, y = 3.2
+  point[1.0] =5.6; //... You can addd many key-value as you like!
+
   runApp(Center(
       child: Text(
         cars.toString(),
