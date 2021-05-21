@@ -25,6 +25,7 @@ class Car {
   }
   void sayHello({required String personName}){
     print("Hello $personName");
+    // _doSomething(); //You can access "private" property inside
   }
   //function as "a variable"
   Function handleEvent = (){};
