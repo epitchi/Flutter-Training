@@ -1,4 +1,4 @@
-package com.example.function_variable_string_array
+package com.example.day1_func_variable_str_arr
 
 import io.flutter.embedding.android.FlutterActivity
 

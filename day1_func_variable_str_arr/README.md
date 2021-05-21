@@ -1,4 +1,4 @@
-# function_variable_string_array
+# day1_func_variable_str_arr
 
 A new Flutter project.
 
