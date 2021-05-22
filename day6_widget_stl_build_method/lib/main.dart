@@ -17,16 +17,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // build: abstract method from parent class(StatlessWidget)
     return MaterialApp(
-      title: "This is my first app",
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            "Hello $name, age: $age",
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.lightBlueAccent),
-            textDirection: TextDirection.ltr,
+        title: "This is my first app",
+        home: Scaffold(
+          body: Center(
+            child: Text(
+              "Hello $name, age: $age",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.lightBlueAccent),
+              textDirection: TextDirection.ltr,
+            ),
           ),
-        ),
-      )
+        )
     );
   }
 }
